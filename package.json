@@ -1,6 +1,7 @@
 {
   "name": "foundation-zurb-template",
   "version": "1.0.0",
+  "homepage": "https://nataliecardot.com/zeus-hosting-test",
   "description": "Official ZURB Template for Foundation for Sites.",
   "main": "gulpfile.babel.js",
   "scripts": {
