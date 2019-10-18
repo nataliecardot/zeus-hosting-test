@@ -1,8 +1,8 @@
 .DS_Store
 node_modules
 npm-debug.log
+# Removed dist
 bower_components
-dist
 *.swp
 .cache
 .idea
