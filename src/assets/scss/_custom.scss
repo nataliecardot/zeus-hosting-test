@@ -1,0 +1,655 @@
+// The underscore tells transpile to ignore this file. It's imported into app.scss (with @import 'custom.scss'; the leading underscore is omitted by convention, but it would work with it too)
+
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
+// Company name in nav bar
+
+.top-nav li,
+.top-bar li {
+  letter-spacing: 0.03em;
+}
+
+// Top nav
+
+.top-nav {
+  background: $dark-gray;
+  padding: 0 0.3rem;
+  padding-left: 15px;
+}
+
+// First/left ul inside top nav div
+.top-list-left {
+  list-style: none;
+  margin: 0;
+
+  li {
+    // Note: with display: inline, height, width, and top and bottom margins are all ignored, but not with display: inline-block. Also note that float: left would accomplish the same as display: inline-block here, but the purpose is clearer doing it this way
+    display: inline-block;
+    padding: 10px 15px;
+    color: $white;
+    font-size: 13px;
+  }
+
+  li:first-child {
+    padding-left: 0;
+  }
+
+  li i {
+    padding-right: 8px;
+  }
+
+  a {
+    color: lighten($primary, 10%);
+  }
+}
+
+// Second/right ul inside top nav div
+.top-list-right {
+  list-style: none;
+  float: right;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    padding: 10px 15px;
+    color: $white;
+    font-size: 13px;
+  }
+
+  a {
+    color: $white;
+  }
+
+  a:hover {
+    color: $secondary;
+  }
+}
+
+// Top bar
+
+// Changed top bar padding from 0.5rem to 1.5rem in _settings.scss
+
+.top-bar {
+  color: $white;
+
+  h1 {
+    font-size: 28px;
+    letter-spacing: 1.5px;
+  }
+
+  span {
+    font-family: "Monoton", sans-serif;
+    letter-spacing: 3.5px;
+    color: lighten($primary, 25%);
+    background: $dark-gray;
+    padding: 9px;
+    border-radius: 5px;
+  }
+
+  li {
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $white;
+  }
+
+  ul a:hover {
+    color: $secondary;
+  }
+
+  a.current {
+    color: $secondary;
+    border-bottom: 3px solid $secondary;
+  }
+}
+
+// Showcase section
+.showcase {
+  color: $white;
+  // The background shorthand requires that you also set background-position in order to set background-size
+  background: url("../img/showcase.jpg") no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  // Use instead of margin-top in .showcase-box-top for perfect vertical centering:
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+
+  .showcase-box-top {
+    padding: 20px 40px;
+    margin-top: 40px;
+    background: $primary;
+    color: $white;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .showcase-header {
+    font-size: 1.9375rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .showcase-underlined-text {
+    border-bottom: 1px #ccc solid;
+    padding-bottom: 10px;
+  }
+
+  .showcase-box-bottom {
+    background: $medium-gray;
+    padding: 20px 40px;
+    border-radius: 0 0 10px 10px;
+
+    .starting-at {
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
+    i {
+      margin-right: 0.3em;
+    }
+
+    .get-started-now {
+      font-size: 1.35rem;
+      line-height: 1.4;
+    }
+
+    .showcase-pricing p {
+      margin: 0;
+    }
+
+    .showcase-pricing span {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .start-link {
+      padding-top: 20px;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+// Domain search section
+.domain-search {
+  background: $light-gray;
+  padding: 30px 20px 20px 20px;
+  border-bottom: 2px #ccc solid;
+  margin-bottom: 30px;
+
+  .input-group {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .domain-form {
+    .input-group-label,
+    .input-group-field {
+      border-color: $medium-light-gray;
+    }
+
+    .input-group-field {
+      padding: 12px;
+    }
+  }
+}
+
+// Packages section
+
+.packages-header {
+  margin: 0.5em 0;
+}
+
+.packages-subheader {
+  margin-bottom: 2.5em;
+}
+
+.pricing {
+  margin: 0.6rem 0 0.2rem 0;
+
+  span {
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+
+.p-box-1,
+.p-box-2,
+.p-box-3 {
+  text-align: center;
+
+  .fas {
+    font-size: 60px;
+  }
+
+  .features {
+    margin: 20px 0 30px 0;
+
+    li {
+      padding: 10px 0;
+      border-bottom: #ccc solid 1px;
+    }
+
+    li:last-child {
+      border: 0;
+    }
+  }
+}
+
+.p-box-1 {
+  .fas {
+    color: $primary;
+  }
+  .pricing span {
+    color: $primary;
+  }
+}
+
+.p-box-2 {
+  .fas {
+    color: $secondary;
+  }
+
+  .pricing span {
+    color: $secondary;
+  }
+}
+
+.p-box-3 {
+  .fas {
+    color: $extra;
+  }
+
+  .pricing span {
+    color: $extra;
+  }
+}
+
+// Section A
+.section-a {
+  margin-top: 30px;
+  padding: 150px 40px;
+  background: $light-gray;
+}
+
+// Section B
+.section-b {
+  background: $dark-gray;
+  color: $white;
+  padding: 150px 30px;
+  text-align: center;
+
+  h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+}
+
+// Section C
+.section-c {
+  background: $primary;
+  color: $white;
+  padding: 100px 200px;
+  text-align: center;
+
+  h3 {
+    margin: 0.7em 0 0.8em 0;
+    font-size: 1.5em;
+  }
+}
+
+// Client login modal (a Foundation Reveal)
+.login-modal {
+  padding: 35px;
+
+  h1 {
+    margin-bottom: 0.7em;
+  }
+
+  input {
+    margin-bottom: 1.3em;
+  }
+
+  .login-bottom-group {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+  .login-couple {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    margin-right: 8px;
+  }
+
+  .switch {
+    margin-bottom: 0;
+  }
+
+  button.button {
+    margin-bottom: 0;
+  }
+}
+
+// Contact page
+
+// This is so it will surround the form
+.contact {
+  padding-bottom: 30px;
+
+  .callout {
+    overflow: auto;
+  }
+
+  button {
+    margin-top: 0.5em;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}
+
+// Footer
+footer {
+  padding: 100px 100px 100px 150px;
+
+  .copyright {
+    font-size: 14px;
+    margin: 2em 0 0 0;
+  }
+
+  h4 {
+    margin-left: 0.7em;
+    font-size: 1.3em;
+  }
+
+  .social i {
+    padding: 0 6px;
+    color: $medium-gray;
+  }
+
+  li a:hover {
+    color: darken($primary, 15%);
+  }
+
+  .social i:hover {
+    color: darken($medium-gray, 10%);
+  }
+}
+
+// Shared, VPS, and Dedicated info pages
+
+.shared-header, .vps-header, .dedicated-header {
+  margin: 0.7em 0;
+}
+
+.shared-subheader, .vps-subheader, .dedicated-subheader, about-subheader {
+  margin-bottom: 1.7em !important;
+}
+
+.shared, .vps, .dedicated {
+  padding-bottom: 50px;
+}
+
+// About page
+
+.about {
+  .about-header {
+    margin: 1em 0 0.7em 0;
+  }
+
+  padding: 0 20px 30px 20px;
+
+  h3+p {
+    margin-bottom: 2em;
+  }
+}
+
+/* ------------ MEDIA QUERIES ------------ */
+
+/* Small screens */
+@media screen and (max-width: 767px) {
+  h1 {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .top-nav {
+    padding: 0;
+  }
+
+  .top-bar {
+    text-align: center;
+  }
+
+  .top-list-left {
+    display: none;
+  }
+
+  .top-list-right {
+    float: none;
+    text-align: center;
+  }
+
+  .showcase {
+    min-height: 625px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .showcase-box-top,
+  .showcase-box-bottom {
+    width: 90%;
+    margin: 0 auto !important;
+  }
+
+  .domain-search {
+
+    .input-group {
+      width: 100%;
+    }
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .packages-header {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  .packages-subheader {
+    padding: 7px;
+  }
+
+  .shared-header, .vps-header, .dedicated-header, .about-header {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  .shared-subheader, .shared-subheader, .dedicated-subheader, .about-subheader {
+    padding: 7px;
+  }
+
+  .section-a {
+    padding: 60px 10px 50px 10px;
+
+    h2 {
+      font-size: 1.7em;
+      margin-top: 1em;
+    }
+  }
+
+  .section-b h2 {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+  }
+
+  .section-c {
+    padding: 50px;
+  }
+
+  .section-c i {
+    margin: 1em 0 0.5em 0;
+  }
+
+  .first-i {
+    margin-top: 0.3em !important;
+  }
+
+  footer {
+    text-align: center;
+    padding: 100px;
+  }
+
+  // Adding space above footer sections
+  .company,
+  .support {
+    margin-top: 2.5em;
+  }
+
+  .social {
+    margin: 3em 0 2.5em 0;
+  }
+
+  .about {
+    padding: 0 10px 30px 10px;
+
+    h3 {
+      margin-top: 2em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .top-list-left {
+    display: none;
+  }
+
+  .top-list-right {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .top-bar {
+    text-align: center;
+  }
+
+  .top-bar-left, .top-bar-right {
+    width: 100%;
+  }
+
+  .showcase {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .showcase-box-top,
+  .showcase-box-bottom {
+    width: 70%;
+    margin: 0 auto !important;
+  }
+
+  .domain-search {
+
+    .input-group {
+      width: 90%;
+    }
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .packages-header {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  .packages-subheader {
+    padding: 7px;
+  }
+
+  .shared-header, .vps-header, .dedicated-header, .about-header {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  .shared-subheader, .shared-subheader, .dedicated-subheader, .about-subheader {
+    padding: 7px;
+  }
+
+  .section-a {
+    h2 {
+      font-size: 1.7em;
+      margin-top: 1em;
+    }
+  }
+
+  .section-b h2 {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+  }
+
+  .section-c {
+    padding: 70px;
+  }
+
+  .section-c i {
+    margin: 1em 0 0.5em 0;
+  }
+
+  .first-i {
+    margin-top: 0.3em !important;
+  }
+
+  // Image on about page
+  .employee {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer {
+    text-align: center;
+    padding: 100px;
+  }
+
+  // Adding space above footer sections
+  .company,
+  .support {
+    margin-top: 2.5em;
+  }
+
+  .social {
+    margin: 3em 0 2.5em 0;
+  }
+
+  .about {
+    h3 {
+      margin-top: 2em;
+      font-size: 1.5em;
+    }
+  }
+}
